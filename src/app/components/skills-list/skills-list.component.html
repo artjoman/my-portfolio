@@ -1,1 +1,17 @@
-<p>skills-list works!</p>
+<div class="ui container">
+    <div class="ui horizontal divider">
+      <h1 id="skills">Skills</h1>
+    </div>
+  
+    <div class="ui center aligned">
+      <div class="ui large horizontal divided list">
+        <div class="item" *ngFor="let skill of $skills | async">
+          <img class="ui avatar image" src="{{ skill.skillImgUrl }}">
+          <div class="content">
+            <div>Skill Name: {{skill.skillName}}</div>
+            <div>Skill Level: {{skill.skillLevel}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

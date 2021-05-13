@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { MessagesPageComponent } from './pages/messages-page/messages-page.component';
 
 const routes: Routes = [
   { path: '', component: AuthPageComponent },
   { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuard] },
+  { path: 'messages', component: MessagesPageComponent, canActivate: [AuthGuard] },
   { path: '**', component: AuthPageComponent }
 ];
 
